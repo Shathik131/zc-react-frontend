@@ -11,7 +11,7 @@ function QuickSearch() {
   let getMealTypes = async () => {
     try {
       let response = await axios.get(
-        "http://localhost:5003/api/get-meal-types"
+        "https://zc-react-backend.herokuapp.com/api/get-meal-types"
       );
       let data = response.data;
       if (data.status === true) {

@@ -10,7 +10,9 @@ function Wallpaper() {
 
   let getLocationList = async () => {
     try {
-      let response = await axios.get("http://localhost:5003/api/get-location");
+      let response = await axios.get(
+        "https://zc-react-backend.herokuapp.com/api/get-location"
+      );
       let data = response.data;
       if (data.status === true) {
         setLocationList([...data.result]);
@@ -27,7 +29,7 @@ function Wallpaper() {
     let value = event.target.value;
     if (value !== "") {
       try {
-        let url = `http://localhost:5003/api/get-restaurant-by-location-id/${value}`;
+        let url = `https://zc-react-backend.herokuapp.com/api/get-restaurant-by-location-id/${value}`;
         let { data } = await axios.get(url);
         if (data.status == true) {
           if (data.result.length === 0) {
