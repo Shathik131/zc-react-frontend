@@ -61,7 +61,7 @@ function Header(props) {
   };
   return (
     <>
-      <GoogleOAuthProvider clientId="410532462407-li4lj98fagnmf0iqgholr3hu72upvgit.apps.googleusercontent.com">
+      <GoogleOAuthProvider clientId="1079568944117-gri7he4vjnj5m2om74c0hkepv49rhn0n.apps.googleusercontent.com">
         <div
           className="modal fade"
           id="google-sign-in"
