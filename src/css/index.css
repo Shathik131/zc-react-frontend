@@ -1,3 +1,7 @@
+:root {
+  --third-color: #636f88;
+}
+
 .main-section {
   background-color: red;
   height: 70vh;
@@ -127,6 +131,25 @@
   padding: 2px 5px;
   border: 2px solid gray;
   margin: 0 2px;
+}
+
+.pagination_section a {
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+}
+
+/* pagination hover effect on active*/
+.pagination_section a:hover {
+  background-color: var(--third-color);
+  color: white;
+}
+
+.page-number {
+  height: 36px;
+  width: 36px;
+  color: var(--third-color);
+  border-radius: 7px;
+  border: 1px solid var(--third-color);
 }
 /* search page end */
 

@@ -60,7 +60,13 @@ function SearchPageResult() {
         _filter["lcost"] = Number(costForTwo[0]);
         _filter["hcost"] = Number(costForTwo[1]);
         break;
+
+      case "page":
+        _filter["page"] = Number(value);
+        console.log(_filter);
+        break;
     }
+
     console.log(_filter);
     setFilter({ ..._filter });
     filterOperation(_filter);
@@ -305,15 +311,54 @@ function SearchPageResult() {
                 </div>
               );
             })}
-            <div className="col-12 pagination d-flex justify-content-center">
-              <ul className="pages">
-                <li>&lt;</li>
-                <li className="active">1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>&gt;</li>
-              </ul>
+
+            <div className="pagination_section text-center mt-5">
+              <a href="#" className="page-number">
+                ❮
+              </a>
+              <a
+                href="#"
+                title="Algorithm"
+                className="page-number"
+                onClick={(event) => makeFiltration(event, "page")}
+              >
+                1{" "}
+              </a>
+              <a
+                href="#"
+                title="DataStructure"
+                className="page-number"
+                onClick={(event) => makeFiltration(event, "page")}
+              >
+                2
+              </a>
+              <a
+                href="#"
+                title="Languages"
+                className="page-number"
+                onClick={(event) => makeFiltration(event, "page")}
+              >
+                3
+              </a>
+              <a
+                href="#"
+                title="Interview"
+                className="active page-number"
+                onClick={(event) => makeFiltration(event, "page")}
+              >
+                4
+              </a>
+              <a
+                href="#"
+                title="practice"
+                className="page-number"
+                onClick={(event) => makeFiltration(event, "page")}
+              >
+                5
+              </a>
+              <a href="#" className="page-number">
+                ❯
+              </a>
             </div>
           </div>
         </div>
