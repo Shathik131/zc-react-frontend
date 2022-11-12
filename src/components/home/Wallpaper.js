@@ -50,7 +50,7 @@ function Wallpaper() {
 
   return (
     <>
-      <section className="row main-section align-content-start">
+      <section className="row main-section align-content-start ">
         <div className="co-12">
           <Headers color="" />
         </div>

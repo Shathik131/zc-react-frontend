@@ -351,7 +351,7 @@ function RestaurantPage() {
       </div>
 
       <Header color="bg-danger" />
-      <section className="row justify-content-center">
+      <section className="row justify-content-center restaurant-page-three ">
         <section className="col-11 mt-2 restaurant-main-image position-relative">
           <img src={"/images/" + restaurant.image} alt="" />
           <button
@@ -391,8 +391,8 @@ function RestaurantPage() {
           </div>
           {tab === 1 ? (
             <section>
-              <h4 className="mb-3">About this place</h4>
-              <p className="m-0 fw-bold">Cuisine</p>
+              <h4 className="mb-3 text-danger">About this place</h4>
+              <p className="m-0 fw-bold text-danger">Cuisine</p>
               <p className="mb-3 text-muted small">
                 {restaurant.cuisine.length > 0
                   ? restaurant.cuisine.reduce((pValue, cValue) => {
@@ -401,20 +401,18 @@ function RestaurantPage() {
                   : null}
               </p>
 
-              <p className="m-0 fw-bold">Average Cost</p>
+              <p className="m-0 fw-bold text-danger">Average Cost</p>
               <p className="mb-3 text-muted small">
                 ₹{restaurant.min_price} for two people (approx.)
               </p>
             </section>
           ) : (
             <section>
-              <h4 className="mb-3">Contact</h4>
-              <p className="m-0 fw-bold">Phone Number</p>
-              <p className="mb-3 text-danger small ">
-                +{restaurant.contact_number}
-              </p>
+              <h4 className="mb-3 text-danger">Contact</h4>
+              <p className="m-0 fw-bold text-danger">Phone Number</p>
+              <p className="mb-3 small ">+{restaurant.contact_number}</p>
 
-              <p className="m-0 fw-bold">{restaurant.name}</p>
+              <p className="m-0 fw-bold text-danger">{restaurant.name}</p>
               <p className="mb-3 text-muted small">
                 {restaurant.locality},{restaurant.city}
               </p>

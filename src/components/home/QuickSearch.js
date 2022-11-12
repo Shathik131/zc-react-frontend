@@ -35,7 +35,7 @@ function QuickSearch() {
 
   return (
     <>
-      <section className="row justify-content-center">
+      <section className="row justify-content-center quick-search-area color-yellow">
         <section className="col-10 mt-3">
           <h3 className="fw-bold text-navy">Quick Searches</h3>
           <p className="text-secondary">Discover restaurants by type of meal</p>

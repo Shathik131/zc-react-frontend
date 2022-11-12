@@ -78,12 +78,12 @@ function SearchPageResult() {
   }, []);
   return (
     <>
-      <div className="row">
+      <div className="row search-page-two">
         <div className="col-12 px-5 pt-4">
-          <p className="h3">Breakfast Places In Mumbai</p>
+          <p className="h3 color-red">Breakfast Places In Mumbai</p>
         </div>
         {/* <!-- food item --> */}
-        <div className="col-12 d-flex flex-wrap px-lg-5 px-md-5 pt-4">
+        <div className="col-12 d-flex color-yellow flex-wrap px-lg-5 px-md-5 pt-4">
           <div className="food-shadow col-12 col-lg-3 col-md-4 me-5 p-3 mb-4">
             <div className="d-flex justify-content-between">
               <p className="fw-bold m-0">Filter</p>
