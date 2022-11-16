@@ -9,6 +9,8 @@ function SearchPageResult() {
   let { meal_id } = params;
   let [restaurantList, setRestaurantList] = useState([]);
   let [locationList, setLocationList] = useState([]);
+  let [cuisine, setcuisine] = useState([]);
+
   let [filter, setFilter] = useState({ meal_type: meal_id });
 
   let getLocationList = async () => {
@@ -41,6 +43,16 @@ function SearchPageResult() {
     }
   };
 
+  let cuisineadding = (value) => {
+    let index = cuisine.indexOf(Number(value));
+    if (index === -1) {
+      cuisine.unshift(Number(value));
+    } else {
+      cuisine.splice(index, 1);
+    }
+    setcuisine(cuisine);
+  };
+
   let makeFiltration = (event, type) => {
     let value = event.target.value;
     let _filter = { ...filter };
@@ -51,6 +63,14 @@ function SearchPageResult() {
         } else {
           delete _filter["location"];
         }
+        break;
+      case "cuisine":
+        cuisineadding(value);
+        if (cuisine.length === 0) {
+          delete _filter["cuisine"];
+          break;
+        }
+        _filter["cuisine"] = cuisine;
         break;
       case "sort":
         _filter["sort"] = Number(value);
@@ -118,6 +138,69 @@ function SearchPageResult() {
               </div>
               <p className="mt-4 mb-2 fw-bold">Cuisine</p>
               <div>
+                {/* <div className="py-2">Cuisine</div> */}
+                <div>
+                  <input
+                    value="1"
+                    onChange={(event) => makeFiltration(event, "cuisine")}
+                    id="North Indian"
+                    className="hand py-1 mx-2"
+                    type="checkbox"
+                  />
+                  <label htmlFor="North Indian" className="mx-2">
+                    North Indian
+                  </label>
+                </div>
+                <div>
+                  <input
+                    value="2"
+                    onChange={(event) => makeFiltration(event, "cuisine")}
+                    id="South Indian"
+                    className="hand py-1 mx-2"
+                    type="checkbox"
+                  />
+                  <label htmlFor="South Indian" className="mx-2">
+                    South Indian
+                  </label>
+                </div>
+                <div>
+                  <input
+                    value="3"
+                    onChange={(event) => makeFiltration(event, "cuisine")}
+                    id="Chinese"
+                    className="hand py-1 mx-2"
+                    type="checkbox"
+                  />
+                  <label htmlFor="Chinese" className="mx-2">
+                    Chinese
+                  </label>
+                </div>
+                <div>
+                  <input
+                    value="4"
+                    onChange={(event) => makeFiltration(event, "cuisine")}
+                    id="Fast Food"
+                    className="hand py-1 mx-2"
+                    type="checkbox"
+                  />
+                  <label htmlFor="Fast Food" className="mx-2">
+                    Fast Food
+                  </label>
+                </div>
+                <div>
+                  <input
+                    value="5"
+                    onChange={(event) => makeFiltration(event, "cuisine")}
+                    id="Street Food"
+                    className="hand py-1 mx-2"
+                    type="checkbox"
+                  />
+                  <label htmlFor="Street Food" className="mx-2">
+                    Street Food
+                  </label>
+                </div>
+              </div>
+              {/* <div>
                 <div className="ms-1">
                   <input
                     type="checkbox"
@@ -168,7 +251,7 @@ function SearchPageResult() {
                     Street Food
                   </label>
                 </div>
-              </div>
+              </div> */}
               <p className="mt-4 mb-2 fw-bold">Cost For Two</p>
               <div>
                 <div className="ms-1">

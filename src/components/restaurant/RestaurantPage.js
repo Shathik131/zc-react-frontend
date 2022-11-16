@@ -328,6 +328,7 @@ function RestaurantPage() {
                 </label>
                 <textarea
                   className="form-control"
+                  placeholder=""
                   rows="3"
                   value="Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016"
                   onChange={() => {}}
