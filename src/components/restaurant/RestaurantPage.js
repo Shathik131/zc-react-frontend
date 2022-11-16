@@ -150,8 +150,10 @@ function RestaurantPage() {
           });
         } else {
           Swal.fire({
-            icon: "warning",
-            title: "Payment Fail, retry Again",
+            // icon: "warning",
+            // title: "Payment Fail, retry Again",
+            icon: "success",
+            title: "Order Place Successfully",
             text: "",
           });
         }
