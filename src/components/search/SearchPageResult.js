@@ -200,58 +200,6 @@ function SearchPageResult() {
                   </label>
                 </div>
               </div>
-              {/* <div>
-                <div className="ms-1">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    value="1"
-                  />
-                  <label htmlFor="" className="form-check-label ms-1">
-                    North Indian
-                  </label>
-                </div>
-                <div className="ms-1">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    value="2"
-                  />
-                  <label htmlFor="" className="form-check-label ms-1">
-                    South Indian
-                  </label>
-                </div>
-                <div className="ms-1">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    value="3"
-                  />
-                  <label htmlFor="" className="form-check-label ms-1">
-                    Chinese
-                  </label>
-                </div>
-                <div className="ms-1">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    value="4"
-                  />
-                  <label htmlFor="" className="form-check-label ms-1">
-                    Fast Food
-                  </label>
-                </div>
-                <div className="ms-1">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    value="5"
-                  />
-                  <label htmlFor="" className="form-check-label ms-1">
-                    Street Food
-                  </label>
-                </div>
-              </div> */}
               <p className="mt-4 mb-2 fw-bold">Cost For Two</p>
               <div>
                 <div className="ms-1">
